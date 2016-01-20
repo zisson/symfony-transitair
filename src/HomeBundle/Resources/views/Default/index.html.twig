@@ -1,4 +1,75 @@
 {% extends 'base.html.twig' %}
 {% block title %}Accueil{%endblock%}
-{% block body %}{% endblock %}
+{% block body %}
+<form class="ink-form">
+		<div class="column-group horizontal-gutters">
+			<div class="control-group all-100 small-100 tiny-100">
+				<h2 class="align-center">SUIVI COLIS</h2>
+				<div class="control prepend-button" role="search">
+					<input type="submit" value="Search" class="ink-button">
+					<span>
+						<input type="text" name="phone" id="phone" placeholder="Enter your package ref">
+					</span>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>
+
+<div class="container">
+	<div class="devis">
+	<form class="text-align: center">
+	<div class="formul">
+	<label for="inline-phone" class="all-20 align-right">Depart &nbsp; &nbsp; </label>
+		<input type="date" max="AAAA-MM-DD" min="AAAA-MM-DD" name="the_date">
+	</div>
+	<div class="formul">
+		<input name="sexe" type="radio" value="Homme">Particulier
+		<input  name="sexe" type="radio" value="Femme">Professionel
+	</div>
+	<div class="formul">
+		<div class="control required">
+		<input name="text" id="text-input" type="text" placeholder="Destination">
+		</div>
+	</div>
+	<div class="formul">
+		<input name="sexe" type="radio" value="Homme">Particulier
+		<input  name="sexe" type="radio" value="Femme">Professionel
+	</div>
+	<div class="formul">
+		<div class="control required">
+		<input name="text" id="text-input" type="text" placeholder="Poids du Colis">
+		</div>
+	</div>
+	<SELECT class="contenu-colis" name="nom" size="1">
+		<OPTION>contenu Colis
+		<OPTION>contenu Colis2
+		<OPTION>contenu Colis3
+	</SELECT>
+
+	<SELECT class="type-colis" name="nom" size="1">
+		<OPTION>type Colis
+		<OPTION>type Colis2
+		<OPTION>type Colis3
+	</SELECT>
+	<SELECT class="nb-colis" name="nom" size="1">
+		<OPTION>nb1
+		<OPTION>type Colis2
+		<OPTION>type Colis3
+	</SELECT>
+	</form>
+	</div>
+	<div class="part">
+		<h2>Particulier</h2>
+		<p>
+		Constituendi autem sunt qui sint in amicitia fines et quasi termini diligendi. De quibus tres video sententias ferri, quarum nullam probo, unam, ut eodem modo erga amicum adfecti simus, quo erga nosmet ipsos, alteram.
+		</p>
+	</div>
+	<div class="prof">
+		<h2>Professionel</h2>
+		<p>
+		Constituendi autem sunt qui sint in amicitia fines et quasi termini diligendi. De quibus tres video sententias ferri, quarum nullam probo, unam, ut eodem modo erga amicum adfecti simus, quo erga nosmet ipsos, alteram.
+		</p>
+	</div>
+{% endblock %}
 
