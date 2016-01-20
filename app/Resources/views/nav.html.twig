@@ -13,11 +13,18 @@
 			<img src="images/logo.png">
 			</a>
 		</figure>
+
+
 		<nav class="ink-navigation">
 		<ul style="text-align: right">
-			<li><a style="text-decoration: none" href="{{ path('fos_user_registration_register') }}">
-				<i class="fa fa-user-plus fa-lg"></i>&nbsp; creer mon compte
-			</a></li>
+			{% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                {{ 'layout.logged_in_as'|trans({'%username%': app.user.username}, 'FOSUserBundle') }} |
+                <a href="{{ path('fos_user_security_logout') }}">
+                    {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}
+                </a>
+            {% else %}
+                <a href="{{ path('fos_user_security_login') }}">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a>
+            {% endif %}
 		</ul>
 		<ul class="menu horizontal">
 			<li><a href="#"></a></li>
@@ -30,6 +37,8 @@
 			<li><a href="#">Partenaire</a></li>
 		</ul>
 		</nav>
+
+		
 	</header>
 </div>
 
